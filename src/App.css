@@ -1,38 +1,45 @@
-.App {
+
+.id {
+  margin-bottom: 20px;
+  margin-top: 20px;
+  width: 400px;
+  font-size: 1.25vw;
+}
+
+.taskinfo {
+  margin-left: 15px;
+}
+
+h1 {
+  margin-top: 0;
   text-align: center;
+  width: 100%;
+  background-color: rgb(155, 153, 153);
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: rgb(255, 255, 255);
+  padding-top: 1.5vw;
+  padding-bottom: 1.5vw;
+  font-size: 2vw;
+  border-radius: 0 0 0.85vw 0.85vw;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  background: rgb(248, 247, 247);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.someButton {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  vertical-align: middle;
+  font-size: 1vw;
+  text-transform: uppercase;
+  font-family: inherit;
+  background-color: rgb(255, 255, 255);
+  border-radius: 0.2vw;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+button.someButton:active {
+  transform: translate(0, 0.075vw);
 }
