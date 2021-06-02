@@ -1,45 +1,4 @@
-
-.id {
-  margin-bottom: 20px;
-  margin-top: 20px;
-  width: 400px;
-  font-size: 1.25vw;
-}
-
-.taskinfo {
-  margin-left: 15px;
-}
-
-h1 {
-  margin-top: 0;
-  text-align: center;
-  width: 100%;
-  background-color: rgb(155, 153, 153);
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  color: rgb(255, 255, 255);
-  padding-top: 1.5vw;
-  padding-bottom: 1.5vw;
-  font-size: 2vw;
-  border-radius: 0 0 0.85vw 0.85vw;
-}
-
 body {
   font-family: Helvetica, Arial, sans-serif;
   background: rgb(248, 247, 247);
-}
-
-.someButton {
-  position: relative;
-  display: inline-block;
-  cursor: pointer;
-  vertical-align: middle;
-  font-size: 1vw;
-  text-transform: uppercase;
-  font-family: inherit;
-  background-color: rgb(255, 255, 255);
-  border-radius: 0.2vw;
-}
-
-button.someButton:active {
-  transform: translate(0, 0.075vw);
 }
