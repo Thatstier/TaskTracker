@@ -1,8 +1,8 @@
 .container {
   font-size:26px;
-  display:flex;
-  justify-content:center;
-  align-items:center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   
   &-theme-dark{
     background-color:rgb(37, 37, 37);
@@ -15,44 +15,12 @@
   
   padding: 15px;
 }
-  
-  
-.add-button {
-  cursor: pointer;
-  vertical-align: middle;
-  font-size: 1.2vw;
-  text-transform: uppercase;
-  font-family: inherit;
-  font-weight: bold;
-  
-  &-theme-dark{
-    background-color:rgb(255, 255, 255);
-    align-items: flex-start;
-  }
-    
-  &-theme-light{
-    background-color: rgba(214, 214, 214, 0.808);
-  }
-  
-  &:hover{
-    background-color: rgb(221, 125, 34);
-  }
-}
-  
+
 .input {
     margin-left: 15px;
     margin-right: 15px;
-    width: 200px;
+    width: 500px;
     height: 30px;
     font-size: 20px;
 }
-  
-.input2 {
-    margin-left: 5px;
-    margin-right: 15px;
-    width: 200px;
-    height: 30px;
-    font-size: 20px;
-}
-  
   
