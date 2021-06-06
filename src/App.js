@@ -1,9 +1,12 @@
 import React from 'react';
 import styles from './App.module.scss';
-import ToDoList from './components/ToDoList/ToDoList';
 import classnames from 'classnames/bind';
 import { DEFAULT_THEME, ThemeContext } from "./ThemeContext";
-import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter, Switch, Route, Link } from "react-router-dom";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Project from "./components/Project";
+import ProjectsList from "./components/ProjectsList";
+import Redirect from "react-router-dom/es/Redirect";
 
 const cx = classnames.bind(styles)
 
@@ -22,6 +25,13 @@ class App extends React.Component {
         <BrowserRouter>
           <div className={cx("container", `container-theme-${this.state.theme}`)}>
           <h2>You've got some things to do, buddy</h2>
+          <div className="navbar-nav mr-auto">
+            <li className="nav-item">
+            <Link to={"/projects"} className="nav-link">
+                Projects
+            </Link>
+            </li>
+        </div>
           <div className={cx("radios")}>
             <div className={cx('theme')}>
             <div>
@@ -50,8 +60,12 @@ class App extends React.Component {
           </div>
           </div>
           <ThemeContext.Provider value={this.state.theme}>
-            <ToDoList />
-          </ThemeContext.Provider>
+                <Switch>
+                <Route exact path={["/", "/projects"]} component={ProjectsList} />
+                <Route path="/projects/:id" component={Project} />
+                <Redirect from='*' to='/projects' />
+                </Switch>
+            </ThemeContext.Provider>
         </div>
         </BrowserRouter>
         )
