@@ -5,19 +5,18 @@ import {ThemeContext} from "..//..//ThemeContext";
 
 const cx = classnames.bind(styles)
 
-const Task = (props) => {
+const Task = React.memo(({task, changeCompletedStatus}) => {
     return (
     <ThemeContext.Consumer> 
       { theme => (
             <div className={cx("container",`container-theme-${theme}`)}>
-                <div class={cx("id", `id-theme-${theme}`)}>{props.id}</div>
-                <div class={styles.name}>Task name: {props.name}</div>
-                <div>Details: {props.description}</div>
+                <div class={cx("id", `id-theme-${theme}`)}>{task.id}</div>
+                <div class={styles.name}>Task name: {task.name}</div>
+                <div>Details: {task.description}</div>
                 <div>
                   <button className={cx("changeStatusButton",
-                  `changeStatusButton-color-${props.completed}-${theme}`)} onClick={() => {
-                    props.onChangeTask(props.id)
-                  }}>{props.completed.toString()}</button>
+                  `changeStatusButton-color-${task.completed}-${theme}`)} onClick={() => changeCompletedStatus()}>
+                  {task.completed.toString()}</button>
                 </div>
                 <hr></hr>
             </div>
@@ -25,4 +24,6 @@ const Task = (props) => {
     </ThemeContext.Consumer>
     )
  }
- export default Task;
+)
+
+export default Task;
